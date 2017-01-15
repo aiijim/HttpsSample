@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0OV-ic-NTZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qNp-3j-YQl">
+            <objects>
+                <navigationController id="0OV-ic-NTZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WKf-k8-iP9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y76-I2-na1" kind="relationship" relationship="rootViewController" id="a79-9p-SgU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0b-fv-WSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="-171"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="1t0-hK-iRj">
+            <objects>
+                <viewController id="y76-I2-na1" userLabel="Main Controller" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TF2-gz-EXo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fiJ-gQ-csN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iiD-Oc-JgN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWz-sE-kYN">
+                                <rect key="frame" x="107" y="156" width="105" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="NSURLConnection"/>
+                                <connections>
+                                    <action selector="clickConnectionBtn:" destination="y76-I2-na1" eventType="touchUpInside" id="n4T-ip-20x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlf-ga-agZ">
+                                <rect key="frame" x="118" y="213" width="85" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="NSURLSession"/>
+                                <connections>
+                                    <action selector="clickSessionBtn:" destination="y76-I2-na1" eventType="touchUpInside" id="Npi-BV-xQS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXg-yH-V3z">
+                                <rect key="frame" x="128" y="270" width="64" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="UIWebView"/>
+                                <connections>
+                                    <action selector="clickWebviewBtn:" destination="y76-I2-na1" eventType="touchUpInside" id="qoz-1X-eSU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvl-Bx-v2i">
+                                <rect key="frame" x="124" y="327" width="72" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="WKWebView"/>
+                                <connections>
+                                    <action selector="clickWKWebViewBtn:" destination="y76-I2-na1" eventType="touchUpInside" id="hq6-Y5-0x9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xO1-eQ-O1F">
+                                <rect key="frame" x="25.5" y="384" width="269" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="NSURLConnection+UIWebView+NSURLSession"/>
+                                <connections>
+                                    <action selector="clickComposeBtn:" destination="y76-I2-na1" eventType="touchUpInside" id="nbf-xI-yBT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LXg-yH-V3z" firstAttribute="centerX" secondItem="iiD-Oc-JgN" secondAttribute="centerX" id="8Cx-yu-k5F"/>
+                            <constraint firstItem="LXg-yH-V3z" firstAttribute="top" secondItem="nlf-ga-agZ" secondAttribute="bottom" constant="30" id="9My-Br-bW5"/>
+                            <constraint firstItem="Tvl-Bx-v2i" firstAttribute="centerX" secondItem="iiD-Oc-JgN" secondAttribute="centerX" id="DU6-lc-4MJ"/>
+                            <constraint firstItem="nlf-ga-agZ" firstAttribute="centerX" secondItem="iiD-Oc-JgN" secondAttribute="centerX" id="I6S-nb-rAK"/>
+                            <constraint firstItem="pWz-sE-kYN" firstAttribute="centerX" secondItem="iiD-Oc-JgN" secondAttribute="centerX" id="QLZ-qQ-2ve"/>
+                            <constraint firstItem="xO1-eQ-O1F" firstAttribute="top" secondItem="Tvl-Bx-v2i" secondAttribute="bottom" constant="30" id="VGV-4u-fNW"/>
+                            <constraint firstItem="nlf-ga-agZ" firstAttribute="top" secondItem="pWz-sE-kYN" secondAttribute="bottom" constant="30" id="gkR-r1-Mkh"/>
+                            <constraint firstItem="xO1-eQ-O1F" firstAttribute="centerX" secondItem="iiD-Oc-JgN" secondAttribute="centerX" id="yZ2-Jl-4IP"/>
+                            <constraint firstItem="LXg-yH-V3z" firstAttribute="centerY" secondItem="iiD-Oc-JgN" secondAttribute="centerY" id="yas-KE-nYO"/>
+                            <constraint firstItem="Tvl-Bx-v2i" firstAttribute="top" secondItem="LXg-yH-V3z" secondAttribute="bottom" constant="30" id="zf9-Uk-Nd7"/>
+                            <constraint firstItem="Tvl-Bx-v2i" firstAttribute="centerX" secondItem="iiD-Oc-JgN" secondAttribute="centerX" id="zx6-PO-IUy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="访问不可信服务器示例" id="AqY-FG-9ba"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="preview" id="4sm-EO-734"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acL-z0-ejd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="-171"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="UIWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKE-TC-Elq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BKE-TC-Elq" secondAttribute="bottom" id="K6p-em-hlm"/>
+                            <constraint firstItem="BKE-TC-Elq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZDM-kg-10E"/>
+                            <constraint firstAttribute="trailing" secondItem="BKE-TC-Elq" secondAttribute="trailing" id="j3Y-RL-Cph"/>
+                            <constraint firstItem="BKE-TC-Elq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vKM-4c-eS8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4sk-NC-rxi"/>
+                    <connections>
+                        <outlet property="webContainer" destination="BKE-TC-Elq" id="bDf-as-CgL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="-171"/>
+        </scene>
+    </scenes>
+</document>
